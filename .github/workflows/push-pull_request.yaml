@@ -16,4 +16,4 @@ jobs:
               uses: actions/checkout@v4.3.1
 
             - name: Running Tests
-              run: npm app-test
+              run: npm test

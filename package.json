@@ -4,7 +4,7 @@
     "description": "A sample project to demonstrate GitHub Actions",
     "main": "src/app.js",
     "scripts": {
-        "app-test": "bash src/app-test.sh"
+        "test": "bash src/app-test.sh"
     },
     "author": "Mohamed Ahmed Ibrahim",
     "license": "ISC"
