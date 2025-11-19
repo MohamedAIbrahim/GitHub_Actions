@@ -5,4 +5,4 @@ function greet(name) {
 
 module.exports = greet;
 
-console.log(greet("World"));
+console.log(greet("Mohamed"));
