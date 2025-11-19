@@ -1,0 +1,19 @@
+name: Push & Pull Request Workflow 
+
+on: 
+    push: # When Commiting Changes Related To Src Files & Directories On Main Branch
+        branches:
+            - main 
+        paths:
+            - "src/**"
+
+jobs:
+    push-pullrequest:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4.3.1
+
+            - name: Running Tests
+              run: npm test
