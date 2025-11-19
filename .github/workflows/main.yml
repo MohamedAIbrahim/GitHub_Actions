@@ -1,0 +1,20 @@
+name: Listing Repos Workflow
+
+on: # Specifiy Trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking Out Code
+        uses: actions/checkout@v4.3.1
+
+      - name: Listing Repos Directories 
+        run: | 
+          cd .github/workflows
+          ls -la
+    
