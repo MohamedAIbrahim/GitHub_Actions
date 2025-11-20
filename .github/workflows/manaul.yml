@@ -1,0 +1,24 @@
+name: manual workflow
+
+on:
+  workflow_dispatch: # Manual Trigger
+    inputs:
+      env:
+        description: Choose Deploy Environment
+        required: true
+        default: staging 
+        type: choice
+        options:
+          - staging
+          - testing
+          - production
+jobs:
+  deploy_environment: 
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Deploying To Environment
+        run: echo "Deploying The Application ..... "
+  
+        
+    
