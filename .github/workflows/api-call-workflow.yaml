@@ -1,0 +1,13 @@
+name: API Call Workflow
+
+on:
+    repository_dispatch:
+        types: [incident_report] # payload_type to trigger this workflow
+
+jobs: 
+    handle-incident-report:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Handling Incident
+              run: echo "Incident report received and being processed."
+                  
