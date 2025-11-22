@@ -1,0 +1,31 @@
+on: 
+  workflow_dispatch:
+
+jobs:
+  job_1:
+    runs-on: ubuntu=latest
+    steps:
+      - run: echo "Running Job ${{ github.job }}"
+
+  job_2:
+    runs-on: ubuntu-latest
+    needs: job_1
+    steps:
+      - run: echo "Running Job ${{ github.job }}"
+
+  job_3:
+    runs-on: ubuntu-latest
+    needs: job_1
+    steps: 
+      - run: echo "Running Job ${{ github.job }}"
+
+  job_4:
+    runs-on: ubuntu-latest
+    needs: # Evaluated Using AND
+      - job_2
+      - job_3
+    steps:
+      - run: echo "Running Job ${{ github.job }}"
+
+# Expected Running Flow : job_1 ---> job_2 & job_3 ---> job_4
+      
