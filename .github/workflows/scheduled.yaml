@@ -1,17 +1,17 @@
-name: Scheduled Workflow
+# name: Scheduled Workflow
 
-on:
-    schedule:
-        - cron: "* * * * *" # Runs every minute for testing purposes
+# on:
+#     schedule:
+#         - cron: "* * * * *" # Runs every minute for testing purposes
         
-jobs:
-    scheduled-job:
-        runs-on: ubuntu-latest
+# jobs:
+#     scheduled-job:
+#         runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
+#         steps:
+#             - name: Checkout repository
+#               uses: actions/checkout@v3
 
-            - name: Run a script
-              run: echo "This workflow runs every minute as per the cron schedule."
+#             - name: Run a script
+#               run: echo "This workflow runs every minute as per the cron schedule."
 
